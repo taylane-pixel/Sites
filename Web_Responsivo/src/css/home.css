@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+    --color-primary: #04BFAD;
+    --color-2: #68ecdf;
+    --color-secondare: #fff;
+    --color-text: #1f1d1d;
+    --box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.4);
+}
+/* home=================================== */
+#home{
+    width: 100%;
+    height: 80vh;
+    margin: auto;
+    background-color: var(--color-primary);
+
+}
+#home #content-home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#home #right{
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 4rem;
+}
+#right #title-banner{
+    color: var(--color-secondare);
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+#home #right p{
+    margin-top: 0;
+    color: var(--color-secondare);
+    font-size: 18px;
+    font-weight: 700;
+}
+#home #right button{
+    width: 40%;
+    padding: 12px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: var(--color-secondare);
+    box-shadow: var(--box-shadow);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: auto;
+    transition: transform 0.2s ease;
+}
+#home #right button:hover{
+    transform: scale(1.1);
+}
+#home #left{
+    width: 40%;
+    padding-top: 50px;
+    margin-right: 2rem;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+#home .circulo{
+   width: 40%;
+   height: 80%;
+   border-radius: 50% 30% 60% 30%/ 40% 50% 30% 60% ;
+   background-color: #68ecdf;
+   position: absolute;
+   align-items: center;
+   z-index: 1;
+   
+}
+#home #left img{
+    width: 500px;
+    z-index: 2;
+    padding: 30px;
+    position: relative;
+}
+#homer #waver{
+    width: 100%;
+    height: 10%;
+    
+}
+/* RESPOSIVIDADE HOME */
+/* Adicione isso ao final do seu CSS existente */
+
+@media (max-width: 1024px) {
+    #home #content-home {
+        height: 20vh;
+        padding-top: 50px;
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens na coluna */
+    }
+
+    #home #right,
+    #home #left {
+        width: 90%; /* Ajusta a largura dos itens */
+        margin: 0; /* Remove as margens laterais */
+    }
+
+    #home #right {
+        margin-bottom: 20px; /* Espaçamento entre os elementos */
+    }
+
+    #home #left img {
+        display: none; 
+    }
+
+    #home .circulo {
+      display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #home #content-home {
+        height: 40vh;
+        flex-direction: column; /* Mantém a coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    #home #right {
+        width: 90%; /* Ajusta a largura dos itens */
+        margin-bottom: 20px; /* Espaçamento entre os elementos */
+    }
+
+    #home #left {
+        width: 90%; /* Ajusta a largura dos itens */
+        margin: 0; /* Remove as margens laterais */
+    }
+
+    #home #left img {
+        width: 100%; /* Imagem se ajusta à largura da tela */
+        padding: 0; /* Remove padding para melhor responsividade */
+
+    }
+
+    #home .circulo {
+        width: 100%; /* Aumenta o círculo para telas menores */
+        height: auto; /* Mantém a proporção */
+    }
+    
+    #home #right button {
+        width: 80%; /* Botão mais largo para telas menores */
+    }
+}

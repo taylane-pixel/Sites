@@ -1,0 +1,105 @@
+/* font Lato */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* variáveis de cores */
+:root{
+    --main-color: #d92123;
+    --text-color: #fff;
+    --text-secondary: #191919;
+    --secondary-color: #868686;
+    --tertiary-color: #eff3f4;
+}
+
+/* estilizações bases */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato';
+    box-sizing: border-box;
+}
+/* todos os links */
+a{
+    text-decoration: none;
+}
+/* todas as imagens */
+img{
+    width: 100%;
+}
+
+/* input submit do formulário */
+input[type='submit']{
+    cursor: pointer;
+}
+
+/* icones */
+i{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-size: 2.5rem;
+    padding: 2rem;
+}
+/* =========================================================== */
+
+/* CABEÇALHO E BANNER */
+#header{
+    min-height: 90vh;
+    background-image: url(../scr/img/main_banner4.png);
+    background-size: cover; /*img se enquadra ao tamanho do container sem repetir*/
+    background-position: center;
+    color: var(--tertiary-color);
+    margin-bottom: 2rem; /*para afastar as sessões*/
+    position: relative;
+}
+#inner-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* logo */
+#brand{
+    background-color: var(--main-color);
+    padding: 1rem;
+}
+/* barra de navegação */
+#navbar{
+    display: flex;
+    gap: 3rem;
+    text-transform: uppercase;
+    margin-right: 2rem;
+}
+#navbar a{
+    color: var(--text-color);
+    font-weight: bold;
+}
+/* banner ativo */
+.banner.active {
+    opacity: 1;
+}
+.banner{
+    width: 50%;
+    padding: 4rem;
+    opacity: 0;
+    position: absolute;
+    transition: 0.6s;
+}
+/* texto banner */
+.banner h2{
+    font-size: 4rem;
+    margin-bottom: 1.2rem;
+    position: relative;
+    z-index: 2;
+}
+.banner p{
+    font-size: 1.5rem;
+}
+#square{
+  display: block;
+  width: 150px;
+  height: 150px;
+  background-color: var(--main-color);
+  z-index: 1;
+  position: absolute;
+  left: 20px;
+  top: 40px;
+
+}
